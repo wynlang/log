@@ -1,0 +1,19 @@
+// log — Structured logging for Wyn
+// Usage: Log_info("server started"), Log_error("connection failed")
+
+var LOG_LEVEL = 0  // 0=debug, 1=info, 2=warn, 3=error
+
+fn Log_set_level(level: int) { LOG_LEVEL = level }
+
+fn Log_debug(msg: string) {
+    if LOG_LEVEL <= 0 { println("[DEBUG] " + msg) }
+}
+fn Log_info(msg: string) {
+    if LOG_LEVEL <= 1 { println("[INFO]  " + msg) }
+}
+fn Log_warn(msg: string) {
+    if LOG_LEVEL <= 2 { println("[WARN]  " + msg) }
+}
+fn Log_error(msg: string) {
+    if LOG_LEVEL <= 3 { println("[ERROR] " + msg) }
+}

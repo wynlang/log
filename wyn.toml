@@ -1,0 +1,4 @@
+[project]
+name = "log"
+version = "0.1.0"
+description = "Structured logging with levels, timestamps, and JSON output"
