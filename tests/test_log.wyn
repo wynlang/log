@@ -1,15 +1,31 @@
-fn main() -> int {
-    Test.init("log")
+test "default level" {
     // Test log level filtering
     var level = 0
-    Test.assert_eq_int(level, 0, "default level")
+    assert_eq(level, 0)
+}
+
+test "set level" {
+    // Test log level filtering
+    var level = 0
     level = 2
-    Test.assert_eq_int(level, 2, "set level")
+    assert_eq(level, 2)
+}
+
+test "info prefix" {
+    // Test log level filtering
+    var level = 0
+    level = 2
     // Test log output format
     var msg = "[INFO]  server started"
-    Test.assert(msg.starts_with("[INFO]"), "info prefix")
+    assert(msg.starts_with("[INFO]"))
+}
+
+test "error prefix" {
+    // Test log level filtering
+    var level = 0
+    level = 2
+    // Test log output format
+    var msg = "[INFO]  server started"
     var err = "[ERROR] connection failed"
-    Test.assert(err.starts_with("[ERROR]"), "error prefix")
-    Test.summary()
-    return 0
+    assert(err.starts_with("[ERROR]"))
 }
