@@ -1,4 +1,4 @@
-# log — Official Wyn Package
+# log - Official Wyn Package
 
 Structured logging with levels. Pure Wyn.
 

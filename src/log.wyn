@@ -1,4 +1,4 @@
-// log — Structured logging for Wyn
+// log - Structured logging for Wyn
 // Usage: Log_info("server started"), Log_error("connection failed")
 
 var LOG_LEVEL = 0  // 0=debug, 1=info, 2=warn, 3=error
